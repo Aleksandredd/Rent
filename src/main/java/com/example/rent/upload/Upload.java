@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "TOPICS")
+@Table(name = "UPLOADS")
 @Getter
 @Setter
 public class Upload {
@@ -32,7 +32,7 @@ public class Upload {
     @Column(name = "CREATE_TIME", nullable = false, columnDefinition = "TIMESTAMP")
     private LocalDateTime createTime;
 
-    @OneToMany(mappedBy = "topic",
+    @OneToMany(mappedBy = "upload",
             cascade = CascadeType.ALL, // Cascade all operations
             orphanRemoval = true) // Remove orphans (apply remove operation to entries without relationship)
     private List<Comment> comments = new ArrayList<>();

@@ -6,7 +6,7 @@ spring:
 
 # DB Configuration
 datasource:
-  url: jdbc:h2:file:~/rent.db
+  url: jdbc:h2:file:~/rent.db;
   driver-class-name: org.h2.Driver
   username: admin
   password: admin
@@ -16,6 +16,7 @@ jpa:
   hibernate:
     ddl-auto: update
   show-sql: true
+  open-in-view: false
 
 # H2 Configuration
 h2:

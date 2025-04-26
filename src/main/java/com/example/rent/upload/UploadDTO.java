@@ -8,6 +8,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
+import static com.example.rent.util.TimeFormatter.prettyFormat;
 
 @Data
 public class UploadDTO {
@@ -23,6 +24,7 @@ public class UploadDTO {
         var uploadDTO = new UploadDTO();
         BeanUtils.copyProperties(upload, uploadDTO);
         uploadDTO.setComments(upload.getComments().stream().map(CommentDTO::fromComment).collect(Collectors.toList()));
+        uploadDTO.setPrettyCreateTime(prettyFormat(upload.getCreateTime()));
         return uploadDTO;
     }
 }

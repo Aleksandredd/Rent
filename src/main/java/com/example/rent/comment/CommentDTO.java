@@ -4,6 +4,7 @@ import org.springframework.beans.BeanUtils;
 
 
 import java.time.LocalDateTime;
+import static com.example.rent.util.TimeFormatter.prettyFormat;
 
 
 @Data
@@ -18,6 +19,7 @@ public class CommentDTO {
     public static CommentDTO fromComment(Comment comment) {
         CommentDTO commentDTO = new CommentDTO();
         BeanUtils.copyProperties(comment, commentDTO);
+        commentDTO.setPrettyCreateTime(prettyFormat(comment.getCreateTime()));
         return commentDTO;
     }
 }
