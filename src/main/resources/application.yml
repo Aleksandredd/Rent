@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: rent
+  thymeleaf:
+    cache: false
+
+# DB Configuration
+datasource:
+  url: jdbc:h2:file:~/rent.db
+  driver-class-name: org.h2.Driver
+  username: admin
+  password: admin
+
+# JPA Configuration
+jpa:
+  hibernate:
+    ddl-auto: update
+  show-sql: true
+
+# H2 Configuration
+h2:
+  console:
+    enabled: true
