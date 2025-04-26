@@ -92,7 +92,7 @@ public class UploadController {
         }
         try {
             UploadDTO newUpload = uploadService.save(form.getTitle(), form.getText());
-            redirectAttributes.addFlashAttribute("successMessage", "Topic created!");
+            redirectAttributes.addFlashAttribute("successMessage", "Uploaded successfully!");
 
             // Also, construct URL for newly created topic
             String newUploadURL = ServletUriComponentsBuilder.fromCurrentContextPath()
