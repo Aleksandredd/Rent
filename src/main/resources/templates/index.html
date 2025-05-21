@@ -6,22 +6,62 @@
     <title>Home Page</title>
 </head>
 <body>
+
 <div layout:fragment="content">
-    <h1 class="text-center">Rent Website</h1>
-    <div class="badge text-bg-primary text-wrap" style="width: 80rem;">
-        <h1 class="text-center">On this site you can Rent everything .</h1>
-        <P>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci, aspernatur at aut commodi corporis dolor earum,
-            iste maxime nihil qui quisquam quod reiciendis repudiandae ut voluptas voluptatibus! Aut, doloribus.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci, aspernatur at aut commodi corporis dolor earum,
-            iste maxime nihil qui quisquam quod reiciendis repudiandae ut voluptas voluptatibus! Aut, doloribus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci, aspernatur at aut commodi corporis dolor earum,
-            iste maxime nihil qui quisquam quod reiciendis repudiandae ut voluptas voluptatibus! Aut, doloribus.
 
-        </P>
+    <!-- Hero Section -->
+    <div class="hero text-center">
+        <div>
+            <h1 class="display-4 fw-bold">Find Your Perfect Car or House</h1>
+            <p class="lead">Reliable, Affordable, and Fast Rental Service</p>
+            <div class="d-flex justify-content-center gap-3 mt-3 flex-wrap">
+                <a href="#categories" class="btn btn-primary btn-lg">Start Renting</a>
+                <a href="login" class="btn btn-outline-light btn-lg">Rent Yours</a>
+            </div>
+
+        </div>
     </div>
-    <br>
 
+    <!-- Categories -->
+    <section id="categories" class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">What would you like to rent?</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card category-card">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" class="card-img-top" alt="Cars">
+                        <div class="card-body">
+                            <h5 class="card-title">Cars</h5>
+                            <p class="card-text">Choose from a wide range of cars for daily, weekly, or monthly rental.</p>
+                            <a href="cars" class="btn btn-outline-primary">Browse Cars</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card category-card">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="card-img-top" alt="Houses">
+                        <div class="card-body">
+                            <h5 class="card-title">Houses</h5>
+                            <p class="card-text">Find cozy homes, apartments, and villas available for short or long stays.</p>
+                            <a href="houses" class="btn btn-outline-primary">Browse Houses</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">
+                <a href="aboutus" class="btn btn-outline-secondary">About Rent Website</a>
+            </h2>
+            <p class="text-center">Rent is your trusted platform to find and rent vehicles or housing effortlessly. Whether you're planning a weekend getaway or looking for a temporary place to stay, we’ve got you covered with reliable options at competitive prices.</p>
+        </div>
+    </section>
 
 </div>
+
 </body>
 </html>

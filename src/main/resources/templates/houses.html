@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <title>Houses</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <h1>Rent - Houses</h1>
+    <p>
+        Welcome to the Houses page, choose suitable house for you
+    </p>
+
+    <h1><i class="fa-solid fa-house"></i> Featured Houses </h1>
+    <br>
+
+    <div class="panel">
+        <h3 class="panel-title">
+            Nicee house ⌚
+        </h3>
+        <img th:src="@{/image/Houses/house1.jpg}" alt="Bootstrap" width="400"height="240">
+
+        <div class="panel-body">
+            <p>💰 Price: 1500$</p>
+            <p>Luxury house</p>
+        </div>
+
+    </div>
+    <div class="product-list">
+        <div class="product-list-row">
+            <div class="panel">
+                <h3 class="panel-title">
+                    premium house
+                </h3>
+                <img th:src="@{/image/Houses/house2.jpg}" alt="Bootstrap" width="400"height="240">
+                <div class="panel-body">
+                    <p>💰 Price: 1200$</p>
+                    <p> very beautiful</p>
+                </div>
+            </div>
+            <div class="panel">
+                <h3 class="panel-title">
+                    House with pool
+                </h3>
+                <img th:src="@{/image/Houses/house3.jpg}" alt="Bootstrap" width="400"height="240">
+                <div class="panel-body">
+                    <p>💰 Price: $700</p>
+                    <p>with pool</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
