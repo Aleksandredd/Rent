@@ -11,8 +11,8 @@
 
     <!-- Hero Section -->
     <div class="hero text-center">
-        <div>
-            <h1 class="display-4 fw-bold">Find Your Perfect Car or House</h1>
+        <div >
+            <h1 th:text="#{app.name}" class="display-4 fw-bold">Find Your Perfect Car or House</h1>
             <p class="lead">Reliable, Affordable, and Fast Rental Service</p>
             <div class="d-flex justify-content-center gap-3 mt-3 flex-wrap">
                 <a href="#categories" class="btn btn-primary btn-lg">Start Renting</a>
@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <div class="card category-card">
-                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" class="card-img-top" alt="Cars">
+                        <img th:src="@{/image/Cars/Bugatti.jpg}" class="card-img-top" alt="Cars">
                         <div class="card-body">
                             <h5 class="card-title">Cars</h5>
                             <p class="card-text">Choose from a wide range of cars for daily, weekly, or monthly rental.</p>

@@ -1,8 +1,9 @@
-package com.example.rent.configuration;
+package com.example.rent.configuration.prod;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -12,14 +13,9 @@ import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 import javax.sql.DataSource;
-
+@Profile("prod")
 @Configuration
-@EnableMethodSecurity(
-        // We will only use @PreAuthorize, so we don't need others :)
-//        prePostEnabled = true, // For @PreAuthorize (true by default)
-//        securedEnabled = true, // For @Secured annotation
-//        jsr250Enabled = true // For @RolesAllowed annotation
-)
+@EnableMethodSecurity()
 @RequiredArgsConstructor
 public class SecurityConfig {
 

@@ -6,50 +6,56 @@
     <title>Cars</title>
 </head>
 <body>
-<div layout:fragment="content">
-    <h1>Rent - Cars</h1>
-    <p>
-        Welcome to the Cars page, choose suitable car for you
-    </p>
+<div layout:fragment="content" class="container my-5">
 
-    <h1><i class="fa-solid fa-car-side"></i> Featured Cars</h1>
-    <br>
+    <h1 class="mb-3">Rent - Cars</h1>
+    <p class="lead">Welcome to the Cars page, choose the most suitable car for you</p>
 
-            <div class="panel">
-                <h3 class="panel-title">
-                    G Class Brabus ⌚
-                </h3>
-                <img th:src="@{/image/Cars/Car2.webp}" alt="Bootstrap" width="400"height="240">
-
-                <div class="panel-body">
-                    <p>💰 Price: 500$</p>
-                    <p>The luxury car with 5.5 Biturbo</p>
-                </div>
+    <!-- Featured Car -->
+    <h2 class="mt-5 mb-3"><i class="fa-solid fa-car-side"></i> Featured Car</h2>
+    <div class="card mb-4 shadow-sm">
+        <div class="row g-0">
+            <div class="col-md-5">
+                <img th:src="@{/image/Cars/Car2.webp}" class="img-fluid rounded-start" alt="G Class Brabus">
             </div>
-    <div class="product-list">
-        <div class="product-list-row">
-            <div class="panel">
-                <h3 class="panel-title">
-                    Ford Mustang 🎧
-                </h3>
-                <img th:src="@{/image/Cars/Car1.jpg}" alt="Bootstrap" width="400"height="240">
-                <div class="panel-body">
-                    <p>💰 Price: 200$</p>
-                    <p> Price per day 5.0, 400 Hp</p>
-                </div>
-            </div>
-            <div class="panel">
-                <h3 class="panel-title">
-                    Ford Fusion
-                </h3>
-                <img th:src="@{/image/Cars/Car3.jpg}" alt="Bootstrap" width="400"height="240">
-                <div class="panel-body">
-                    <p>💰 Price: $70</p>
-                    <p>🔹Economy 2.0 hybrid</p>
+            <div class="col-md-7">
+                <div class="card-body">
+                    <h5 class="card-title">G Class Brabus ⌚</h5>
+                    <p class="card-text">💰 <strong>Price: $500</strong></p>
+                    <p class="card-text">The luxury car with 5.5 Biturbo</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Other Cars -->
+    <h2 class="mt-5 mb-3">Other Cars</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <!-- Ford Mustang -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img th:src="@{/image/Cars/Car1.jpg}" class="card-img-top" alt="Ford Mustang">
+                <div class="card-body">
+                    <h5 class="card-title">Ford Mustang 🎧</h5>
+                    <p class="card-text">💰 <strong>Price: $200</strong></p>
+                    <p class="card-text">Price per day 5.0, 400 Hp</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ford Fusion -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img th:src="@{/image/Cars/Car3.jpg}" class="card-img-top" alt="Ford Fusion">
+                <div class="card-body">
+                    <h5 class="card-title">Ford Fusion</h5>
+                    <p class="card-text">💰 <strong>Price: $70</strong></p>
+                    <p class="card-text">🔹 Economy 2.0 hybrid</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>

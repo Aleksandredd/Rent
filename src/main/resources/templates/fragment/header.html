@@ -24,6 +24,31 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            🌐 Language
+                        </a>
+                        <ul class="dropdown-menu">
+                            <select id="change-language" class="form-select">
+                                <option>Language</option>
+                                <option value="en">English</option>
+                                <option value="ka">ქართული</option>
+                                <option value="de">Germany</option>
+                            </select>
+                        </ul>
+                    </li>
+                    <script>
+
+                        const select = document.querySelector("#change-language");
+
+                        select.addEventListener("change", (event) => {
+
+                            window.location.href = window.location.pathname + '?lang=' + event.target.value;
+
+                        });
+
+                    </script>
                     <li sec:authorize="!isAuthenticated()" class="nav-item">
                         <a class="nav-link" th:href="@{/register}">
                             <i class="fa-solid fa-pen-to-square"></i> Register

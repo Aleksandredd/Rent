@@ -6,51 +6,56 @@
     <title>Houses</title>
 </head>
 <body>
-<div layout:fragment="content">
-    <h1>Rent - Houses</h1>
-    <p>
-        Welcome to the Houses page, choose suitable house for you
-    </p>
+<div layout:fragment="content" class="container my-5">
 
-    <h1><i class="fa-solid fa-house"></i> Featured Houses </h1>
-    <br>
+    <h1 class="mb-3">Rent - Houses</h1>
+    <p class="lead">Welcome to the Houses page, choose the most suitable house for you</p>
 
-    <div class="panel">
-        <h3 class="panel-title">
-            Nicee house ⌚
-        </h3>
-        <img th:src="@{/image/Houses/house1.jpg}" alt="Bootstrap" width="400"height="240">
-
-        <div class="panel-body">
-            <p>💰 Price: 1500$</p>
-            <p>Luxury house</p>
-        </div>
-
-    </div>
-    <div class="product-list">
-        <div class="product-list-row">
-            <div class="panel">
-                <h3 class="panel-title">
-                    premium house
-                </h3>
-                <img th:src="@{/image/Houses/house2.jpg}" alt="Bootstrap" width="400"height="240">
-                <div class="panel-body">
-                    <p>💰 Price: 1200$</p>
-                    <p> very beautiful</p>
-                </div>
+    <!-- Featured House -->
+    <h2 class="mt-5 mb-3"><i class="fa-solid fa-house"></i> Featured House</h2>
+    <div class="card mb-4 shadow-sm">
+        <div class="row g-0">
+            <div class="col-md-5">
+                <img th:src="@{/image/Houses/house1.jpg}" class="img-fluid rounded-start" alt="Nicee house">
             </div>
-            <div class="panel">
-                <h3 class="panel-title">
-                    House with pool
-                </h3>
-                <img th:src="@{/image/Houses/house3.jpg}" alt="Bootstrap" width="400"height="240">
-                <div class="panel-body">
-                    <p>💰 Price: $700</p>
-                    <p>with pool</p>
+            <div class="col-md-7">
+                <div class="card-body">
+                    <h5 class="card-title">Nicee house ⌚</h5>
+                    <p class="card-text">💰 <strong>Price: $1500</strong></p>
+                    <p class="card-text">Luxury house</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Other Houses -->
+    <h2 class="mt-5 mb-3">Other Houses</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <!-- Premium house -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img th:src="@{/image/Houses/house2.jpg}" class="card-img-top" alt="Premium house">
+                <div class="card-body">
+                    <h5 class="card-title">Premium house</h5>
+                    <p class="card-text">💰 <strong>Price: $1200</strong></p>
+                    <p class="card-text">Very beautiful</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- House with pool -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img th:src="@{/image/Houses/house3.jpg}" class="card-img-top" alt="House with pool">
+                <div class="card-body">
+                    <h5 class="card-title">House with pool</h5>
+                    <p class="card-text">💰 <strong>Price: $700</strong></p>
+                    <p class="card-text">With pool</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>
