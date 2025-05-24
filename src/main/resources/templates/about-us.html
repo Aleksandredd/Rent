@@ -3,53 +3,53 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout.html}">
 <head>
-    <title>About Us</title>
+    <title th:text="#{about.title}">About Us</title>
 </head>
 <body>
 <div layout:fragment="content" class="container py-5">
 
     <div class="text-center mb-5">
-        <h1 class="display-5 fw-bold">About Us – About Geo Rent Website</h1>
-        <p class="lead">Welcome to Rent Website where you can rent everything with ease and confidence.</p>
+        <h1 class="display-5 fw-bold" th:text="#{about.title}">About Us – About Geo Rent Website</h1>
+        <p class="lead" th:text="#{about.subtitle}">Welcome to Rent Website where you can rent everything with ease and confidence.</p>
     </div>
 
     <div class="row g-5">
         <div class="col-md-12">
-            <h2><i class="fa-solid fa-car me-2"></i>Cars</h2>
-            <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod, voluptatum. Aliquid culpa fuga itaque maxime molestiae molestias omnis perferendis reiciendis tempora totam. Aspernatur assumenda blanditiis odit recusandae, repudiandae soluta.
+            <h2><i class="fa-solid fa-car me-2"></i><span th:text="#{cars.title}">Cars</span></h2>
+            <p class="text-muted" th:text="#{cars.description}">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit...
             </p>
         </div>
 
         <div class="col-md-6">
-            <h3>🛒 Unmatched Variety</h3>
-            <p>With thousands of products across multiple categories, we ensure you’ll always find what you’re looking for—and more!</p>
+            <h3 th:text="#{variety.title}">🛒 Unmatched Variety</h3>
+            <p th:text="#{variety.description}">With thousands of products across multiple categories...</p>
         </div>
 
         <div class="col-md-6">
-            <h3><i class="fa-solid fa-house me-2"></i>Houses</h3>
-            <p>We understand the excitement of getting your orders quickly, so we’ve partnered with trusted shipping providers to deliver your items as fast as possible.</p>
+            <h3><i class="fa-solid fa-house me-2"></i><span th:text="#{houses.title}">Houses</span></h3>
+            <p th:text="#{houses.description}">We understand the excitement of getting your orders quickly...</p>
         </div>
 
         <div class="col-md-6">
-            <h3><i class="fa-solid fa-screwdriver-wrench me-2"></i>Tools</h3>
-            <p>Shopping shouldn’t break the bank. That’s why we offer competitive pricing, daily deals, and special discounts for our loyal customers.</p>
+            <h3><i class="fa-solid fa-screwdriver-wrench me-2"></i><span th:text="#{tools.title}">Tools</span></h3>
+            <p th:text="#{tools.description}">Shopping shouldn’t break the bank...</p>
         </div>
 
         <div class="col-md-6">
-            <h3>🔒 Secure & Hassle-Free Shopping</h3>
-            <p>We prioritize your security with encrypted payments, multiple payment options, and an easy return policy—so you can shop with confidence.</p>
+            <h3 th:text="#{secure.title}">🔒 Secure & Hassle-Free Shopping</h3>
+            <p th:text="#{secure.description}">We prioritize your security with encrypted payments...</p>
         </div>
 
         <div class="col-md-12">
-            <h3>🎯 Customer-Centric Approach</h3>
-            <p>Your satisfaction is our top priority. Our dedicated customer support team is always ready to assist you, ensuring a smooth and enjoyable shopping journey.</p>
+            <h3 th:text="#{customer.title}">🎯 Customer-Centric Approach</h3>
+            <p th:text="#{customer.description}">Your satisfaction is our top priority...</p>
         </div>
 
         <div class="col-md-12 mt-4">
-            <h2>Join the Rent Family</h2>
-            <p>Millions of shoppers trust Rent for their everyday needs. Whether you're upgrading your tech, refreshing your wardrobe, or finding the perfect gift, we are here to make your experience effortless and exciting.</p>
-            <a href="/" class="fw-bold text-primary">Start shopping today and discover why Rent is your go-to online store!</a>
+            <h2 th:text="#{join.title}">Join the Rent Family</h2>
+            <p th:text="#{join.description}">Millions of shoppers trust Rent for their everyday needs...</p>
+            <a href="/" class="fw-bold text-primary" th:text="#{join.link}">Start shopping today and discover why Rent is your go-to online store!</a>
         </div>
     </div>
 

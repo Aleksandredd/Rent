@@ -1,4 +1,4 @@
-package com.example.rent.configuration.prod;
+package com.example.rent.configuration.dev;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -14,7 +14,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 import javax.sql.DataSource;
 
-@Profile("prod")
+@Profile("dev")
 @Configuration
 @RequiredArgsConstructor
 @EnableMethodSecurity
@@ -36,8 +36,8 @@ public class SecurityConfig {
                 )
                 .logout(Customizer.withDefaults())
                 .rememberMe(configurer -> configurer
-                        .key("superRandomSecretKeyThisIsYesYes...") // Unique key for token encryption
-                        .tokenValiditySeconds(86400) // 1 day in seconds (default is 14 days)
+                        .key("dev-remember-me-key")
+                        .tokenValiditySeconds(86400)
                 )
                 .csrf(Customizer.withDefaults());
 
@@ -51,7 +51,7 @@ public class SecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-        return encoder;
+        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 }
+

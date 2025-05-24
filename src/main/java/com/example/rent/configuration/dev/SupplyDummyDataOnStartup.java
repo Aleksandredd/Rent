@@ -1,4 +1,4 @@
-package com.example.rent;
+package com.example.rent.configuration.dev;
 
 import com.example.rent.post.PostService;
 import com.github.javafaker.Faker;

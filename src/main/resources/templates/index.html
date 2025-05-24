@@ -3,7 +3,7 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout.html}">
 <head>
-    <title>Home Page</title>
+    <title th:text="#{home.title}">Home Page</title>
 </head>
 <body>
 
@@ -11,29 +11,30 @@
 
     <!-- Hero Section -->
     <div class="hero text-center">
-        <div >
-            <h1 th:text="#{app.name}" class="display-4 fw-bold">Find Your Perfect Car or House</h1>
-            <p class="lead">Reliable, Affordable, and Fast Rental Service</p>
+        <div>
+            <h1 class="display-4 fw-bold" th:text="#{hero.title}">Find Your Perfect Car or House</h1>
+            <p class="lead" th:text="#{hero.subtitle}">Reliable, Affordable, and Fast Rental Service</p>
             <div class="d-flex justify-content-center gap-3 mt-3 flex-wrap">
-                <a href="#categories" class="btn btn-primary btn-lg">Start Renting</a>
-                <a href="login" class="btn btn-outline-light btn-lg">Rent Yours</a>
+                <a href="#categories" class="btn btn-primary btn-lg" th:text="#{hero.button.rent}">Start Renting</a>
+                <a href="login" class="btn btn-outline-light btn-lg" th:text="#{hero.button.share}">Rent Yours</a>
             </div>
-
         </div>
     </div>
 
     <!-- Categories -->
     <section id="categories" class="py-5">
         <div class="container text-center">
-            <h2 class="mb-4">What would you like to rent?</h2>
+            <h2 class="mb-4" th:text="#{categories.title}">What would you like to rent?</h2>
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <div class="card category-card">
                         <img th:src="@{/image/Cars/Bugatti.jpg}" class="card-img-top" alt="Cars">
                         <div class="card-body">
-                            <h5 class="card-title">Cars</h5>
-                            <p class="card-text">Choose from a wide range of cars for daily, weekly, or monthly rental.</p>
-                            <a href="cars" class="btn btn-outline-primary">Browse Cars</a>
+                            <h5 class="card-title" th:text="#{categories.cars.title}">Cars</h5>
+                            <p class="card-text" th:text="#{categories.cars.description}">
+                                Choose from a wide range of cars for daily, weekly, or monthly rental.
+                            </p>
+                            <a href="cars" class="btn btn-outline-primary" th:text="#{categories.cars.button}">Browse Cars</a>
                         </div>
                     </div>
                 </div>
@@ -41,9 +42,11 @@
                     <div class="card category-card">
                         <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="card-img-top" alt="Houses">
                         <div class="card-body">
-                            <h5 class="card-title">Houses</h5>
-                            <p class="card-text">Find cozy homes, apartments, and villas available for short or long stays.</p>
-                            <a href="houses" class="btn btn-outline-primary">Browse Houses</a>
+                            <h5 class="card-title" th:text="#{categories.houses.title}">Houses</h5>
+                            <p class="card-text" th:text="#{categories.houses.description}">
+                                Find cozy homes, apartments, and villas available for short or long stays.
+                            </p>
+                            <a href="houses" class="btn btn-outline-primary" th:text="#{categories.houses.button}">Browse Houses</a>
                         </div>
                     </div>
                 </div>
@@ -55,9 +58,11 @@
     <section id="about" class="bg-light py-5">
         <div class="container">
             <h2 class="text-center mb-4">
-                <a href="aboutus" class="btn btn-outline-secondary">About Rent Website</a>
+                <a href="aboutus" class="btn btn-outline-secondary" th:text="#{about.button}">About Rent Website</a>
             </h2>
-            <p class="text-center">Rent is your trusted platform to find and rent vehicles or housing effortlessly. Whether you're planning a weekend getaway or looking for a temporary place to stay, we’ve got you covered with reliable options at competitive prices.</p>
+            <p class="text-center" th:text="#{about.description}">
+                Rent is your trusted platform to find and rent vehicles or housing effortlessly...
+            </p>
         </div>
     </section>
 
@@ -65,3 +70,4 @@
 
 </body>
 </html>
+
